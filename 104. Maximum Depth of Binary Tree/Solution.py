@@ -1,4 +1,5 @@
 from typing import Optional, List
+from functools import cache
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -25,7 +26,7 @@ class Solution:
             height +=1
         return height
                 
-    
+    @cache
     def maxDepth_rec(self, root: Optional[TreeNode]) -> int:        
         """
         Time complexity: O(n)
